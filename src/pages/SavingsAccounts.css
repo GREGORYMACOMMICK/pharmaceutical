@@ -1,0 +1,28 @@
+.savings-account {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.savings-account h2 {
+  text-align: center;
+}
+
+.savings-account form {
+  margin-bottom: 20px;
+}
+
+.savings-account label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.savings-account input,
+.savings-account select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}

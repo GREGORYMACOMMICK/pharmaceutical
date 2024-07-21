@@ -1,0 +1,60 @@
+.homepage-container {
+  padding-top: 60px; /* To offset the fixed navbar */
+  padding: 200px;
+  background-color: #f4f4f4;
+  min-height: 100vh; /* Ensure the background covers the whole viewport height */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+p {
+  text-align: center;
+  color: #666;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  max-width: 300px;
+  flex: 1;
+  text-align: center;
+}
+
+.card h2 {
+  color: #333;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.card li {
+  background: #f9f9f9;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

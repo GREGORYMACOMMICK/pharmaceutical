@@ -1,0 +1,43 @@
+.money-market-account {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.money-market-account h2 {
+  text-align: center;
+}
+
+.money-market-account form {
+  margin-bottom: 20px;
+}
+
+.money-market-account label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.money-market-account input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.money-market-account table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.money-market-account th,
+.money-market-account td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.money-market-account th {
+  background-color: #f2f2f2;
+}

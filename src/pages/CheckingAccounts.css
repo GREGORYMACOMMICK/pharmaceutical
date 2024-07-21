@@ -1,0 +1,44 @@
+.checking-accounts {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.checking-accounts h2 {
+  text-align: center;
+}
+
+.checking-accounts form {
+  margin-bottom: 20px;
+}
+
+.checking-accounts label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.checking-accounts input,
+.checking-accounts select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.checking-accounts table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checking-accounts th,
+.checking-accounts td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.checking-accounts th {
+  background-color: #f2f2f2;
+}
