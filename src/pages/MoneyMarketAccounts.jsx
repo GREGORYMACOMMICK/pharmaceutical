@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
-import "./MoneyMarketAccount.css";
+import "./MoneyMarketAccounts.css";
 
 const MoneyMarketAccount = () => {
   const [accounts, setAccounts] = useState([]);

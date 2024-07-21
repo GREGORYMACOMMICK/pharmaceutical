@@ -36,10 +36,7 @@ function Homepage() {
 
           <section className="card">
             <h2>Loan Execution</h2>
-            <p>
-              We offer various loan options to help you achieve your financial
-              goals:
-            </p>
+
             <ul>
               <li>
                 <Link to="/loan">Personal Loans</Link>

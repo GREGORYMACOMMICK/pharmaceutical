@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
-import "./CertificatesOfDeposit.css";
+import "./CertificatesofDeposit.css";
 
 const CertificatesOfDeposit = () => {
   const [cds, setCds] = useState([]);

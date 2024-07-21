@@ -1,43 +1,90 @@
+/* CertificatesofDeposit.css */
+
 .certificates-of-deposit {
-  max-width: 600px;
-  margin: auto;
+  max-width: 800px;
+  margin: 20px auto;
   padding: 20px;
+  background-color: #f4f4f4;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
 }
 
 .certificates-of-deposit h2 {
   text-align: center;
+  margin-bottom: 20px;
+  color: #110f0f;
 }
 
 .certificates-of-deposit form {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   margin-bottom: 20px;
 }
 
-.certificates-of-deposit label {
+.certificates-of-deposit form div {
+  margin-bottom: 10px;
+}
+
+.certificates-of-deposit form label {
+  font-weight: bold;
   display: block;
   margin-bottom: 5px;
 }
 
-.certificates-of-deposit input {
+.certificates-of-deposit form input[type="text"],
+.certificates-of-deposit form input[type="number"] {
   width: 100%;
   padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.certificates-of-deposit form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.certificates-of-deposit form button:hover {
+  background-color: #45a049;
+}
+
+.certificates-of-deposit h3 {
+  text-align: center;
   margin-bottom: 10px;
+  color: #333;
 }
 
 .certificates-of-deposit table {
   width: 100%;
   border-collapse: collapse;
+  border: 1px solid #ddd;
+  background-color: #fff;
 }
 
-.certificates-of-deposit th,
-.certificates-of-deposit td {
-  border: 1px solid #ccc;
-  padding: 8px;
+.certificates-of-deposit table th,
+.certificates-of-deposit table td {
+  padding: 10px;
   text-align: left;
+  border: 1px solid #ddd;
 }
 
-.certificates-of-deposit th {
+.certificates-of-deposit table th {
   background-color: #f2f2f2;
+}
+
+.certificates-of-deposit table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
 }

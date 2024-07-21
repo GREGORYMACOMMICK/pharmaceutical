@@ -1,18 +1,20 @@
 .homepage-container {
   padding-top: 60px; /* To offset the fixed navbar */
   padding: 200px;
-  background-color: #f4f4f4;
   min-height: 100vh; /* Ensure the background covers the whole viewport height */
+  background-image: url("/gregory.jpeg"); /* Replace 'path/to/your/image.jpg' with your actual image path */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #9aca73;
 }
 
 p {
   text-align: center;
-  color: #666;
+  color: #c4ee7f;
 }
 
 .cards-container {
