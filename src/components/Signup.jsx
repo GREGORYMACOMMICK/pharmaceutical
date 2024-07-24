@@ -1,15 +1,46 @@
 import { useState } from "react";
+import axios from "axios";
 import "./Signup.css";
 
 const Signup = () => {
-  const [username, setUsername] = useState("");
+  const [lastName, setlastName] = useState("");
   const [email, setEmail] = useState("");
+  const [firstName, setfirstName] = useState("");
+  const [phoneNumber, setphoneNumber] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Handle form submission, e.g., send data to server
-    console.log({ username, email, password });
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await axios.post(
+        "https://profiletasks.sandbox.co.ke:8989/register",
+        {
+          phoneNumber,
+          firstName,
+          lastName,
+          email,
+          password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      console.log(response.data);
+      // Handle success (e.g., navigate to another page, show a success message, etc.)
+    } catch (error) {
+      console.error("There was a problem with the axios operation:", error);
+      setError(error.response?.data?.message || error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -17,12 +48,32 @@ const Signup = () => {
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="firstName">firstName:</label>
           <input
             type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            id="firstName"
+            value={firstName}
+            onChange={(e) => setfirstName(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="lastName">lastName:</label>
+          <input
+            type="text"
+            id="lastName"
+            value={lastName}
+            onChange={(e) => setlastName(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="phoneNumber">phoneNumber:</label>
+          <input
+            type="number"
+            id="phoneNumber"
+            value={phoneNumber}
+            onChange={(e) => setphoneNumber(e.target.value)}
             required
           />
         </div>
@@ -46,7 +97,10 @@ const Signup = () => {
             required
           />
         </div>
-        <button type="submit">Sign Up</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Signing up..." : "Sign Up"}
+        </button>
+        {error && <p className="error">{error}</p>}
       </form>
     </div>
   );
